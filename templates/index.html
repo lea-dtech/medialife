@@ -23,28 +23,28 @@
     <header>
         <div class="header_inner">
             <form action="/search" method="POST">
-            {% csrf_token %}
-            <div class="left-side">
-                <!-- Logo -->
-                <div id="logo" class=" uk-hidden@s">
-                    <a href="/">
-                        <b>
-                            <h1 style="text-transform: uppercase;">Media Life</h1>
-                        </b>
-                    </a>
-                </div>
+                {% csrf_token %}
+                <div class="left-side">
+                    <!-- Logo -->
+                    <div id="logo" class=" uk-hidden@s">
+                        <a href="/">
+                            <b>
+                                <h1 style="text-transform: uppercase;">Media Life</h1>
+                            </b>
+                        </a>
+                    </div>
 
-                <!--<div class="triger" uk-toggle="target: #wrapper ; cls: sidebar-active">
+                    <!--<div class="triger" uk-toggle="target: #wrapper ; cls: sidebar-active">
                             <i class="uil-bars"></i>
                         </div>-->
 
-                <!-- <div class="header_search"> -->
+                    <!-- <div class="header_search"> -->
                     <input type="text" name="username" placeholder="Search for username..">&nbsp;
                     <button type="submit"><i class="fa fa-search fa-1x"></i></button>
-                <!-- </div> -->
+                    <!-- </div> -->
 
-            </div>
-        </form>
+                </div>
+            </form>
             <div class="right-side lg:pr-4">
                 <!-- upload -->
                 <a href="#"
@@ -220,7 +220,8 @@
                                         class="bg-gray-200 border border-white rounded-full w-8 h-8">
                                 </div>
                             </a>
-                            <span class="block font-semibold "> <a href="/profile/{{post.user}}">@{{post.user}} </a></span>
+                            <span class="block font-semibold "> <a href="/profile/{{post.user}}">@{{post.user}}
+                                </a></span>
                         </div>
                         <div>
                             <a href="#"> <i
@@ -307,7 +308,8 @@
                                 </div>
 
                             </a> -->
-                            <a href="{{post.image.url}}" class="flex items-center space-x-2 flex-1 justify-end" download>
+                            <a href="{{post.image.url}}" class="flex items-center space-x-2 flex-1 justify-end"
+                                download>
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     aria-hidden="true" role="img" width="25" height="25"
                                     preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
@@ -389,7 +391,7 @@
                 <div class="bg-white  shadow-md rounded-md overflow-hidden">
 
                     <div class="bg-gray-50  border-b border-gray-100 flex items-baseline justify-between py-4 px-6 ">
-                        <h2 class="font-semibold text-lg">Users You Can Follow</h2>
+                        <h2 class="font-semibold text-lg">Users You May Know</h2>
                         <a href="/"> Refresh</a>
                     </div>
 
@@ -398,8 +400,7 @@
                         <div class="flex items-center justify-between py-3">
                             <div class="flex flex-1 items-center space-x-4">
                                 <a href="/profile/{{suggestion.user}}">
-                                    <img src="{{suggestion.profileimg.url}}"
-                                        class="bg-gray-200 rounded-full w-10 h-10">
+                                    <img src="{{suggestion.profileimg.url}}" class="bg-gray-200 rounded-full w-10 h-10">
                                 </a>
                                 <div class="flex flex-col">
                                     <span class="block capitalize font-semibold"> {{suggestion.user}} </span>
