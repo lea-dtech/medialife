@@ -21,8 +21,8 @@ def index(request):
         user_following_list.append(users.user)
     for usernames in user_following_list:
         feed_lists= Post.objects.filter(user=usernames)
-        user_objects_temp= User.objects.get(username=usernames)
-        user_profile_temp=Profile.objects.get(user=user_objects_temp)
+        # user_objects_temp= User.objects.get(username=usernames)
+        # user_profile_temp=Profile.objects.get(user=user_objects_temp)
         feed.append(feed_lists)
 
     feed_list=list(chain(*feed))
