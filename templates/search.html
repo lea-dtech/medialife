@@ -9,8 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="favicon.png" rel="icon" type="image/png">
     <title>Search</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'assets/css/icons.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/uikit.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
@@ -52,7 +50,7 @@
                     </div>
                     <div class="right-side lg:pr-4">
                         <!-- welcome user -->
-                        <a href="#" class="">
+                        <a href="/profile/{{post.user}}" class="">
                             Welcome <b name="" class="">{{user.username}}&nbsp; &nbsp; &nbsp;</b>
                         </a>
 
@@ -67,7 +65,7 @@
     
                             <!-- notivication header -->
                             <div class="px-4 py-3 -mx-5 -mt-4 mb-5 border-b">
-                                <h4>Upload Pics or Videos</h4>
+                                <h4>Upload Pics</h4>
                             </div>
     
                             <!-- notification contents -->
