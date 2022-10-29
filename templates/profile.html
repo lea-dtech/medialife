@@ -69,12 +69,14 @@
 							<div class="user-avatar">
 								<figure>
 									<img src="{{user_profile.profileimg.url}}" style="height: 250px; width: 100%;" alt="">
+									{% if user_object.username == user.username %}
 									<form class="edit-phto">
 										<i class="fa fa-camera-retro"></i>
 										<label class="fileContainer">
-											<a href="#account-settings">Upload Profile Photo</a>
+											<a href="/settings">Upload Profile Photo</a>
 										</label>
 									</form>
+									{% endif %}
 								</figure>
 							</div>
 						</div>
